@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Wonderful Forests of India</title>
+  <title>Wonderful Forests of India – Interactive by Mrs. Amatullah Tyrewala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
   <!-- Optional Google Font -->
@@ -15,32 +15,40 @@
 </head>
 <body>
   <header class="navbar glass-card">
-    <div class="logo">🌳 Forest Explorer</div>
+    <div class="logo">🌳 Forest Explorer India</div>
     <nav>
       <a href="#hero">Home</a>
       <a href="#forests">Forests</a>
       <a href="#games">Games & Quiz</a>
+      <a href="#teacher-spotlight">Teacher</a>
       <a href="#teacher-notes">Teacher Notes</a>
     </nav>
+    <div class="teacher-chip">
+      Created by <strong>Mrs. Amatullah Tyrewala</strong>
+    </div>
   </header>
 
   <main>
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <div class="hero-bg-leaves"></div>
       <div class="hero-content glass-card">
+        <p class="hero-subtitle">An interactive classroom project by</p>
+        <p class="hero-teacher-name">Mrs. Amatullah Tyrewala</p>
+
         <h1>Wonderful Forests of India</h1>
         <p>
-          Explore India’s incredible forests through interactive cards, games, and quizzes.
-          Perfect for curious minds and classroom fun!
+          Travel across India’s most famous forests, discover wildlife, geography, and conservation stories –
+          and test your knowledge with fun games created especially for students.
         </p>
         <div class="hero-actions">
-          <button id="start-exploring-btn" class="btn primary">Start Exploring</button>
+          <button id="start-exploring-btn" class="btn primary">Start Exploring Forests 🍃</button>
           <button id="jump-to-quiz-btn" class="btn secondary">Jump to Quiz 🎯</button>
         </div>
         <div class="hero-badges">
-          <span>Interactive</span>
-          <span>Classroom Friendly</span>
+          <span>Nature Adventure Theme</span>
           <span>Gamified Learning</span>
+          <span>Made by Mrs. Tyrewala</span>
         </div>
       </div>
     </section>
@@ -48,8 +56,8 @@
     <!-- Forest Cards Section -->
     <section id="forests" class="section">
       <div class="section-header">
-        <h2>Explore the Forests</h2>
-        <p>Click on a forest card to discover key facts, species, and fun trivia.</p>
+        <h2>Explore India’s Forests</h2>
+        <p>Click on a forest card to see geography, climate, wildlife, and fun facts.</p>
       </div>
 
       <div class="filters">
@@ -62,11 +70,12 @@
             <option value="North">North</option>
             <option value="South">South</option>
             <option value="Northeast">Northeast</option>
+            <option value="Central">Central</option>
           </select>
         </label>
         <label>
           Search:
-          <input type="text" id="search-input" placeholder="Type a forest or state..." />
+          <input type="text" id="search-input" placeholder="Type a forest, state or region..." />
         </label>
       </div>
 
@@ -80,14 +89,14 @@
     <section id="games" class="section">
       <div class="section-header">
         <h2>Games & Quiz Zone</h2>
-        <p>Test your knowledge and challenge your friends!</p>
+        <p>Test what you’ve learnt – individually, in pairs, or as a whole class!</p>
       </div>
 
       <div class="games-layout">
         <!-- Quiz Game -->
         <div class="game-card glass-card">
           <h3>Forest Quiz 🎯</h3>
-          <p class="muted">Answer multiple-choice questions about Indian forests.</p>
+          <p class="muted">Answer multiple-choice questions about India’s forests, animals, and geography.</p>
 
           <div id="quiz-container">
             <div id="quiz-progress" class="quiz-progress">Question 1 / 1</div>
@@ -110,7 +119,7 @@
         <div class="game-card glass-card">
           <h3>Guess the Forest 🤔</h3>
           <p class="muted">
-            Read the clue and choose the correct forest. Great as a quick classroom activity!
+            Read the clue and choose the correct forest. Great for quick revision games in class!
           </p>
 
           <div id="guess-container">
@@ -132,6 +141,40 @@
       </div>
     </section>
 
+    <!-- Teacher Spotlight Section -->
+    <section id="teacher-spotlight" class="section">
+      <div class="section-header">
+        <h2>Teacher Spotlight ✨</h2>
+        <p>This interactive website has been lovingly created by:</p>
+      </div>
+
+      <div class="teacher-spotlight-grid">
+        <div class="glass-card teacher-showcase">
+          <h3>Mrs. Amatullah Tyrewala</h3>
+          <p class="muted">Innovative Educator • Nature & Technology Enthusiast</p>
+          <p>
+            This project showcases her creativity in combining <strong>environmental education</strong> with
+            <strong>modern web technology</strong>. It is designed to make geography, science, and ICT engaging
+            for students through interactive cards, quizzes, and games.
+          </p>
+          <p class="highlight-quote">
+            “Learning should feel like an adventure – exploring forests, facts and ideas together.” 🌿🚀
+          </p>
+        </div>
+
+        <div class="glass-card teacher-highlight-points">
+          <h3>Why this project stands out 🌟</h3>
+          <ul>
+            <li>✔ Integrates geography, biodiversity, and conservation concepts</li>
+            <li>✔ Uses interactive quizzes and games to reinforce learning</li>
+            <li>✔ Encourages students to explore and add more forests themselves</li>
+            <li>✔ Demonstrates use of HTML, CSS, and JavaScript in a real project</li>
+            <li>✔ Perfect for showcasing <strong>innovation in teaching</strong> during appraisal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Teacher Notes Section -->
     <section id="teacher-notes" class="section">
       <div class="section-header">
@@ -141,21 +184,21 @@
 
       <div class="teacher-grid">
         <div class="glass-card teacher-card">
-          <h3>Lesson Flow</h3>
+          <h3>Suggested Lesson Flow</h3>
           <ul>
-            <li>1️⃣ Start with the hero section and ask students: “Which forests have you heard of?”</li>
-            <li>2️⃣ Let them explore the cards in pairs and note 3 new facts.</li>
-            <li>3️⃣ Play the quiz as a class (projected on screen).</li>
-            <li>4️⃣ Use “Guess the Forest” as a quick recap game.</li>
+            <li>1️⃣ Begin at the home section and ask students which forests they already know.</li>
+            <li>2️⃣ Let students explore the forest cards and note 3 new facts each.</li>
+            <li>3️⃣ Run the quiz on a projector and have students answer in teams.</li>
+            <li>4️⃣ Use “Guess the Forest” as a quick recap game before ending the class.</li>
           </ul>
         </div>
         <div class="glass-card teacher-card">
           <h3>Student Project Ideas</h3>
           <ul>
-            <li>➕ Ask students to add a new forest to the data in <code>script.js</code>.</li>
-            <li>🎨 Let them tweak colors, fonts, and animations in <code>styles.css</code>.</li>
-            <li>💻 Split students into teams: Content, Design, and Testing.</li>
-            <li>🌍 Discuss conservation and why these forests matter.</li>
+            <li>➕ Ask students to add a <code>new forest</code> entry in <code>script.js</code>.</li>
+            <li>🎨 Let them adjust colours, fonts, and layout in <code>styles.css</code>.</li>
+            <li>💻 Split into teams: Content (research), Design (UI), and Testing (checking responses).</li>
+            <li>🌍 Discuss “Why forests matter to India” and connect it to climate change.</li>
           </ul>
         </div>
       </div>
@@ -169,13 +212,33 @@
       <button id="modal-close-btn" class="modal-close">&times;</button>
       <h3 id="modal-title"></h3>
       <p id="modal-location" class="muted"></p>
+      <div id="modal-image-wrap" class="modal-image-wrap">
+        <!-- image injected -->
+      </div>
       <p id="modal-type"></p>
+      <p id="modal-area"></p>
+      <p id="modal-climate"></p>
       <p id="modal-species"></p>
+      <p id="modal-besttime"></p>
+      <p id="modal-extra"></p>
       <p id="modal-fact" class="fun-fact"></p>
     </div>
   </div>
 
   <button id="scroll-top-btn" class="scroll-top-btn hidden">↑</button>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Wonderful Forests of India</strong><br />
+        Interactive learning website
+      </div>
+      <div class="footer-credit">
+        Designed & Developed by<br />
+        <span class="footer-teacher-name">Mrs. Amatullah Tyrewala</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
