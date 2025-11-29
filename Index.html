@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wonderful Forests of India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <header class="navbar glass-card">
+    <div class="logo">🌳 Forest Explorer</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#forests">Forests</a>
+      <a href="#games">Games & Quiz</a>
+      <a href="#teacher-notes">Teacher Notes</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content glass-card">
+        <h1>Wonderful Forests of India</h1>
+        <p>
+          Explore India’s incredible forests through interactive cards, games, and quizzes.
+          Perfect for curious minds and classroom fun!
+        </p>
+        <div class="hero-actions">
+          <button id="start-exploring-btn" class="btn primary">Start Exploring</button>
+          <button id="jump-to-quiz-btn" class="btn secondary">Jump to Quiz 🎯</button>
+        </div>
+        <div class="hero-badges">
+          <span>Interactive</span>
+          <span>Classroom Friendly</span>
+          <span>Gamified Learning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forest Cards Section -->
+    <section id="forests" class="section">
+      <div class="section-header">
+        <h2>Explore the Forests</h2>
+        <p>Click on a forest card to discover key facts, species, and fun trivia.</p>
+      </div>
+
+      <div class="filters">
+        <label>
+          Region:
+          <select id="region-filter">
+            <option value="all">All</option>
+            <option value="West">West</option>
+            <option value="East">East</option>
+            <option value="North">North</option>
+            <option value="South">South</option>
+            <option value="Northeast">Northeast</option>
+          </select>
+        </label>
+        <label>
+          Search:
+          <input type="text" id="search-input" placeholder="Type a forest or state..." />
+        </label>
+      </div>
+
+      <div id="forest-grid" class="forest-grid">
+        <!-- Cards injected by JS -->
+      </div>
+      <p id="no-results" class="muted hidden">No forests match your search… try a different term.</p>
+    </section>
+
+    <!-- Games & Quiz Section -->
+    <section id="games" class="section">
+      <div class="section-header">
+        <h2>Games & Quiz Zone</h2>
+        <p>Test your knowledge and challenge your friends!</p>
+      </div>
+
+      <div class="games-layout">
+        <!-- Quiz Game -->
+        <div class="game-card glass-card">
+          <h3>Forest Quiz 🎯</h3>
+          <p class="muted">Answer multiple-choice questions about Indian forests.</p>
+
+          <div id="quiz-container">
+            <div id="quiz-progress" class="quiz-progress">Question 1 / 1</div>
+            <div id="quiz-question" class="quiz-question">
+              Loading question…
+            </div>
+            <div id="quiz-options" class="quiz-options">
+              <!-- Options injected by JS -->
+            </div>
+            <div id="quiz-feedback" class="quiz-feedback"></div>
+            <div class="quiz-controls">
+              <button id="quiz-next-btn" class="btn primary" disabled>Next ▶</button>
+              <button id="quiz-restart-btn" class="btn tertiary hidden">Restart Quiz 🔄</button>
+            </div>
+            <div id="quiz-score" class="quiz-score"></div>
+          </div>
+        </div>
+
+        <!-- Guess-the-Forest Game -->
+        <div class="game-card glass-card">
+          <h3>Guess the Forest 🤔</h3>
+          <p class="muted">
+            Read the clue and choose the correct forest. Great as a quick classroom activity!
+          </p>
+
+          <div id="guess-container">
+            <div id="guess-clue" class="guess-clue">
+              Click “New Round” to start the game.
+            </div>
+            <div id="guess-options" class="guess-options">
+              <!-- Guess buttons injected by JS -->
+            </div>
+            <div id="guess-feedback" class="guess-feedback"></div>
+            <button id="guess-new-round-btn" class="btn secondary">New Round 🎲</button>
+
+            <div class="guess-scoreboard">
+              <span>Correct: <strong id="guess-correct-count">0</strong></span>
+              <span>Wrong: <strong id="guess-wrong-count">0</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teacher Notes Section -->
+    <section id="teacher-notes" class="section">
+      <div class="section-header">
+        <h2>Teacher Notes 📘</h2>
+        <p>Ideas for using this website as a mini-project or in-class activity.</p>
+      </div>
+
+      <div class="teacher-grid">
+        <div class="glass-card teacher-card">
+          <h3>Lesson Flow</h3>
+          <ul>
+            <li>1️⃣ Start with the hero section and ask students: “Which forests have you heard of?”</li>
+            <li>2️⃣ Let them explore the cards in pairs and note 3 new facts.</li>
+            <li>3️⃣ Play the quiz as a class (projected on screen).</li>
+            <li>4️⃣ Use “Guess the Forest” as a quick recap game.</li>
+          </ul>
+        </div>
+        <div class="glass-card teacher-card">
+          <h3>Student Project Ideas</h3>
+          <ul>
+            <li>➕ Ask students to add a new forest to the data in <code>script.js</code>.</li>
+            <li>🎨 Let them tweak colors, fonts, and animations in <code>styles.css</code>.</li>
+            <li>💻 Split students into teams: Content, Design, and Testing.</li>
+            <li>🌍 Discuss conservation and why these forests matter.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Forest Modal -->
+  <div id="forest-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-card">
+      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-location" class="muted"></p>
+      <p id="modal-type"></p>
+      <p id="modal-species"></p>
+      <p id="modal-fact" class="fun-fact"></p>
+    </div>
+  </div>
+
+  <button id="scroll-top-btn" class="scroll-top-btn hidden">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
